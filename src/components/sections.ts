@@ -1,6 +1,5 @@
 import type { Education, Experience, Skill } from "../data/cv";
 
-// Titolo standard per le sezioni (Profilo, Esperienze, ...).
 export function sectionTitle(title: string, subtitle?: string) {
   return `
     <header class="section__header">
@@ -50,7 +49,7 @@ export function renderExperiences(items: Experience[]) {
     .join("");
 }
 
-// Badge per skill (tipo “pill”).
+// Badge per skill
 export function renderSkillBadges(items: Skill[]) {
   return `<div class="badges">${items
     .map((s) => `<span class="badge">${s.name}</span>`)

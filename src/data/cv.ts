@@ -1,4 +1,3 @@
-// Tipi: ti aiutano a non “rompere” i dati per errore quando li cambi. [web:44]
 export type Skill = { name: string; level?: number };
 export type Experience = {
   title: string;

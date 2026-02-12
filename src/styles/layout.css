@@ -38,7 +38,6 @@
   border: 1px solid rgba(255,255,255,0.25);
 }
 
-/* Quando userai una foto reale */
 .avatar-img{
   width: 56px;
   height: 56px;
@@ -147,7 +146,6 @@
 
 .footer{ padding: 6px 2px 0; }
 
-/* Responsive */
 @media (max-width: 920px){
   .page{ grid-template-columns: 1fr; }
   .sidebar{ position: relative; top: 0; }

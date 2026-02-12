@@ -8,11 +8,6 @@ import {
 } from "./sections";
 
 export function renderApp() {
-  /**
-   * Questa funzione restituisce una stringa HTML.
-   * Vantaggio: struttura semplice, nessun framework.
-   * Se un domani vuoi React/Angular, i “dati” in cv.ts ti restano utili uguale. [web:44]
-   */
   return `
   <div class="page">
     <aside class="sidebar">
