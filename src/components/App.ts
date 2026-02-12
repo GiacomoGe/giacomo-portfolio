@@ -13,7 +13,7 @@ export function renderApp() {
     <aside class="sidebar">
       <div class="sidebar__header">
         <!-- Avatar: per ora è un cerchio CSS. In futuro lo sostituiamo con una foto. -->
-        <img class="avatar-img" src="/profile.jpg" alt="..." />
+        <img class="avatar-img" src="profile.jpg" alt="..." />
 
         <div>
           <h1 class="name">${cv.name}</h1>
