@@ -84,13 +84,13 @@ export const cv = {
     { name: "Inglese", level: "B2" }
   ],
   programming: [
-    { name: "HTML5", level: 85 },
-    { name: "CSS3", level: 85 },
-    { name: "JavaScript", level: 80 },
-    { name: "TypeScript", level: 80 },
+    { name: "HTML5", level: 80 },
+    { name: "CSS3", level: 80 },
+    { name: "JavaScript", level: 65 },
+    { name: "TypeScript", level: 65 },
     { name: "SQL", level: 75 },
-    { name: "Git", level: 85 },
-    { name: "Angular", level: 65 }
+    { name: "Git", level: 75 },
+    { name: "Angular", level: 60 }
   ] as Skill[],
   tools: ["VS Code", "Arduino", "Acronis", "MPS Monitor"],
   hobbies: ["Videogiochi (strategici)", "Nuoto e corsa", "Magia"],
