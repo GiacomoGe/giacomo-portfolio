@@ -10,8 +10,9 @@ export function sectionTitle(title: string, subtitle?: string) {
 }
 
 // Lista semplice (ul/li). Utile per profilo, hobby, note, ecc.
-export function renderList(items: string[]) {
-  return `<ul class="list">${items.map((x) => `<li>${x}</li>`).join("")}</ul>`;
+export function renderList(items: string[], hideBullets: boolean = false) {
+  const className = hideBullets ? 'list list--no-bullets' : 'list';
+  return `<ul class="${className}">${items.map((x) => `<li>${x}</li>`).join("")}</ul>`;
 }
 
 // Card istruzione.

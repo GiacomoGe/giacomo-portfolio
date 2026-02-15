@@ -14,4 +14,6 @@ a:hover{ text-decoration: underline; }
 
 .list{ margin: 8px 0 0; padding-left: 18px; }
 
+.list--no-bullets{ list-style: none; padding-left: 0; }
+
 .muted{ color: var(--muted); }

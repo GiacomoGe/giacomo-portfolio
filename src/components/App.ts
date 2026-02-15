@@ -60,7 +60,7 @@ export function renderApp() {
     <main class="main">
       <section class="section" id="profilo">
         ${sectionTitle("Profilo professionale")}
-        ${renderList(cv.profile)}
+        ${renderList(cv.profile, true)}
       </section>
 
       <section class="section" id="esperienze">

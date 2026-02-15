@@ -21,34 +21,34 @@
 .sidebar a{ color: white; }
 
 .sidebar__header{
-  display: grid;
-  grid-template-columns: 56px 1fr;
-  gap: 14px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
   padding-bottom: 14px;
   border-bottom: 1px solid rgba(255,255,255,0.18);
   margin-bottom: 14px;
 }
 
 .avatar{
-  width: 56px;
-  height: 56px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   background: rgba(255,255,255,0.25);
   border: 1px solid rgba(255,255,255,0.25);
 }
 
 .avatar-img{
-  width: 56px;
-  height: 56px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  border: 1px solid rgba(255,255,255,0.25);
+  border: 2px solid rgba(255,255,255,0.25);
   background: rgba(255,255,255,0.12);
 }
 
-.name{ margin: 0; font-size: 20px; line-height: 1.2; }
-.role{ margin: 4px 0 0; opacity: 0.9; }
+.name{ margin: 12px 0 0; font-size: 24px; line-height: 1.2; font-weight: 600; }
+.role{ margin: 6px 0 0; opacity: 0.9; font-size: 16px; }
 
 .nav{
   display: grid;
