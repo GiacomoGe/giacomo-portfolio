@@ -15,7 +15,7 @@ export function renderList(items: string[], hideBullets: boolean = false) {
   return `<ul class="${className}">${items.map((x) => `<li>${x}</li>`).join("")}</ul>`;
 }
 
-// Card istruzione.
+// Card istruzione
 export function renderEducation(items: Education[]) {
   return items
     .map(
@@ -32,12 +32,12 @@ export function renderEducation(items: Education[]) {
     .join("");
 }
 
-// Card esperienze.
+// Card esperienze
 export function renderExperiences(items: Experience[]) {
   return items
     .map(
       (x) => `
-      <article class="card">
+      <article class="card card--experience">
         <div class="card__top">
           <h3 class="card__title">${x.title}</h3>
           <span class="pill">${x.start} – ${x.end}</span>
@@ -52,7 +52,17 @@ export function renderExperiences(items: Experience[]) {
 
 // Badge per skill
 export function renderSkillBadges(items: Skill[]) {
-  return `<div class="badges">${items
-    .map((s) => `<span class="badge">${s.name}</span>`)
+  return `<div class="skills">${items
+    .map((s) => `
+      <div class="skill">
+        <div class="skill__header">
+          <span class="skill__name">${s.name}</span>
+          <span class="skill__level">${s.level || 0}%</span>
+        </div>
+        <div class="skill__bar">
+          <div class="skill__progress" style="width: ${s.level || 0}%"></div>
+        </div>
+      </div>
+    `)
     .join("")}</div>`;
 }
