@@ -1,18 +1,45 @@
-:root{
-  --bg: #f6f8fb;
-  --card: #ffffff;
+:root {
+  /* Sfondo principale molto scuro */
+  --bg-main: #121212;
+  /* Sfondo delle card (leggermente più chiaro) */
+  --bg-card: rgba(30, 30, 30, 0.6);
+  /* Bordi sottili per l'effetto glassmorphism */
+  --border-card: 1px solid rgba(255, 255, 255, 0.08);
+  
+  /* Colori per i testi */
+  --text-main: #ffffff;
+  --text-muted: #a0a0a0;
+  
+  /* Colori di accento (per le barre delle skill e gradienti) */
+  --accent-blue: #4facfe;
+  --accent-purple: #a18cd1;
+  --accent-orange: #ff9a44;
 
-  --text: #0f172a;
-  --muted: #475569;
+  /* Arrotondamento moderno */
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 8px;
 
-  --primary: #0b3a6d;
-  --primary-2: #124e92;
+  /* Font moderno (puoi importare Inter o simile da Google Fonts) */
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
 
-  --border: rgba(15, 23, 42, 0.10);
-  --shadow: 0 10px 30px rgba(2, 8, 23, 0.08);
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  /* Opzionale: un leggero noise o texture di sfondo */
+}
 
-  --radius: 16px;
-  --radius-sm: 12px;
+/* Stile per i link */
+a {
+  color: var(--text-main);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-  --max: 1100px;
+a:hover {
+  color: var(--accent-blue);
 }

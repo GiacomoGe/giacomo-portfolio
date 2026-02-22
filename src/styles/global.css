@@ -1,19 +1,120 @@
-*{ box-sizing: border-box; }
-
-html{ scroll-behavior: smooth; }
-
-body{
-  margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
-  color: var(--text);
-  background: var(--bg);
+/* ========================
+   CARDS (Esperienze, Istruzione)
+   ======================== */
+.card, .panel {
+  background: var(--bg-card);
+  border: var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  backdrop-filter: blur(10px); /* Effetto vetro se c'è uno sfondo colorato dietro */
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-a{ color: inherit; text-decoration: none; }
-a:hover{ text-decoration: underline; }
+.card:hover, .panel:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
 
-.list{ margin: 8px 0 0; padding-left: 18px; }
+.card_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
 
-.list--no-bullets{ list-style: none; padding-left: 0; }
+.card_title, .panel_title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
 
-.muted{ color: var(--muted); }
+/* Le "pillole" per le date (es. 2023 - 2025) */
+.pill {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.card_meta {
+  color: var(--accent-blue);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.card__text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ========================
+   SKILLS (Barre di progresso)
+   ======================== */
+.skills {
+  display: grid;
+  grid-template-columns: 1fr; /* o 1fr 1fr se vuoi due colonne di skill */
+  gap: 1.2rem;
+}
+
+.skill__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* La linea di base grigia scura */
+.skill__bar {
+  width: 100%;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+/* Il livello riempito. 
+   Uso un gradiente, puoi personalizzarlo per ogni skill se vuoi! */
+.skill__progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+  border-radius: var(--radius-sm);
+  /* L'inline style width: 80% che hai in TS gestirà l'estensione */
+  transition: width 1s ease-in-out;
+}
+
+/* ========================
+   HEADER & SIDEBAR
+   ======================== */
+.sidebar_header {
+  margin-bottom: 3rem;
+}
+
+/* Se vuoi replicare l'effetto testo gradiente gigante come "ALEX CHEN" sul tuo nome */
+h1.name {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(45deg, var(--text-main), var(--accent-blue), var(--accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.role {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+.section_title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  border-bottom: var(--border-card);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
